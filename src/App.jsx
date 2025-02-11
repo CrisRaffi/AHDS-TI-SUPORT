@@ -9,6 +9,9 @@ import {
 } from './app.styled';
 
 import Home from './pages/home';
+import Default from './pages/default';
+
+import { Routes, Route } from 'react-router';
 
 const App = () => {
   return (
@@ -19,7 +22,11 @@ const App = () => {
         </LogoContainer>
         <MenuItensContainer></MenuItensContainer>
       </MenuContainer>
-      <Home></Home>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/default" element={<Default />} />
+      </Routes>
     </MainContainer>
   );
 };

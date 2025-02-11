@@ -20,9 +20,18 @@ import PageviewIcon from '@mui/icons-material/Pageview';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 
 import { primary } from '../../constants/colors.jsx';
-import { grey } from '@mui/material/colors';
 
 const HeaderBar = () => {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  let mm = today.getMonth() + 1; // Months start at 0!
+  let dd = today.getDate();
+
+  if (dd < 10) dd = '0' + dd;
+  if (mm < 10) mm = '0' + mm;
+
+  const formattedToday = dd + '/' + mm + '/' + yyyy;
+
   const StyledBadge = styled(Badge)(({ theme }) => ({
     marginRight: '20px',
     '& .MuiBadge-badge': {
@@ -65,7 +74,9 @@ const HeaderBar = () => {
           >
             Tickets
           </Link>
-          <Typography sx={{ color: 'text.primary' }}>11/02/2025</Typography>
+          <Typography sx={{ color: 'text.primary' }}>
+            {formattedToday}
+          </Typography>
         </Breadcrumbs>
       </HomeHeaderLeftSide>
       <HomeHeaderLeftRight>

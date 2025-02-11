@@ -224,6 +224,6 @@ export const WndroawImg = styled.img`
   bottom: 0;
   right: 0;
   margin-right: 40px;
-  width: 25%;
+  width: 22%;
   padding-bottom: 60px;
 `;
