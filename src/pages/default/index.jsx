@@ -8,7 +8,7 @@ const Default = () => {
   return (
     <MainContainer>
       <HomeContent>
-        <HeaderBar />
+        <HeaderBar title="default" />
         <ContentContainer></ContentContainer>
       </HomeContent>
     </MainContainer>

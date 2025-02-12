@@ -38,11 +38,14 @@ import HeaderBar from '../../components/headerBar';
 
 import { iconColor, primary, secondaryText } from '../../constants/colors.jsx';
 
+import { useNavigate } from 'react-router';
+
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <MainContainer>
       <HomeContent>
-        <HeaderBar />
+        <HeaderBar title="Tickets" />
         <ContentContainer>
           <LeftSide>
             <LeftSideContainer>
@@ -80,7 +83,7 @@ const Home = () => {
                 </LeftItemtext>
               </LeftItem>
               {/*LSIDE ITENS */}
-              <LeftItem>
+              <LeftItem onClick={() => navigate('/tasks')}>
                 <LeftItemSqaure>
                   <AddTaskIcon style={{ color: primary, fontSize: '26px' }} />
                 </LeftItemSqaure>

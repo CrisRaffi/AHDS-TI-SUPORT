@@ -3,6 +3,7 @@ import { primary } from '../../constants/colors.jsx';
 
 export const HomeHeader = styled.div`
   max-width: 100%;
+  min-height: 70px;
   height: 70px;
 
   display: flex;

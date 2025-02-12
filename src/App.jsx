@@ -10,6 +10,7 @@ import {
 
 import Home from './pages/home';
 import Default from './pages/default';
+import Tasks from './pages/tasks';
 
 import { Routes, Route } from 'react-router';
 
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/default" element={<Default />} />
+        <Route path="/tasks" element={<Tasks />} />
       </Routes>
     </MainContainer>
   );

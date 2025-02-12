@@ -160,6 +160,8 @@ export const CardTitle = styled.div`
 
   display: flex;
   align-items: flex-end;
+  font-size: 16px;
+
   color: ${primaryText};
 `;
 
@@ -169,6 +171,7 @@ export const CardSubTitle = styled.div`
 
   display: flex;
   align-items: flex-start;
+  font-size: 12px;
 
   color: ${secondaryText};
 `;

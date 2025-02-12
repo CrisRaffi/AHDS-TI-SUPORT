@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import PropTypes from 'prop-types';
+
 import {
   HomeHeader,
   LightSmallBall,
@@ -21,7 +23,7 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 
 import { primary } from '../../constants/colors.jsx';
 
-const HeaderBar = () => {
+const HeaderBar = (props) => {
   const today = new Date();
   const yyyy = today.getFullYear();
   let mm = today.getMonth() + 1; // Months start at 0!
@@ -72,7 +74,7 @@ const HeaderBar = () => {
             color="inherit"
             href="/material-ui/getting-started/installation/"
           >
-            Tickets
+            {props.title}
           </Link>
           <Typography sx={{ color: 'text.primary' }}>
             {formattedToday}
@@ -123,3 +125,7 @@ const HeaderBar = () => {
 };
 
 export default HeaderBar;
+
+HeaderBar.propTypes = {
+  title: PropTypes.string,
+};
