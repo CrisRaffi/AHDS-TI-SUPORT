@@ -46,3 +46,7 @@
 .css-1txyin7-MuiLinearProgress-root {
   background-color: rgb(239, 232, 255) !important;
 }
+
+.ScrollbarsCustom-ThumbY {
+  background: rgb(0 0 0 / 8%) !important;
+}

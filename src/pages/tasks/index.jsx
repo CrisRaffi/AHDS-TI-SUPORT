@@ -24,13 +24,11 @@ import {
   RadioNDone,
   ContentContainerRightHeader,
   WhiteSquare,
-  MainContent,
-  MainContentTitle,
-  MainContentText,
-  ContentImage,
 } from './tasks.styled';
 
 import { primary, iconColor } from '../../constants/colors.jsx';
+
+import { Scrollbar } from 'react-scrollbars-custom';
 
 import HeaderBar from '../../components/headerBar';
 import LinearProgress from '@mui/material/LinearProgress';
@@ -44,6 +42,10 @@ import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import LibraryBooksOutlinedIcon from '@mui/icons-material/LibraryBooksOutlined';
+
+import Content1 from './content1';
+import Content2 from './content2';
+import Content3 from './content3';
 
 function LinearProgressWithLabel(props) {
   return (
@@ -64,8 +66,23 @@ LinearProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-const Default = () => {
+const Tasks = () => {
   const [progress, setProgress] = useState(50);
+  const [showContent, setShowContent] = useState(1);
+
+  const renderContent = () => {
+    switch (showContent) {
+      case 1:
+        return <Content1 />;
+      case 2:
+        return <Content2 />;
+      case 3:
+        return <Content3 />;
+
+      default:
+        return <Content1 />;
+    }
+  };
 
   return (
     <MainContainer>
@@ -148,15 +165,15 @@ const Default = () => {
                 />
                 Semana 1
               </WeekTab>
-              <TaskIten>
+              <TaskIten onClick={() => setShowContent(1)}>
                 <RadioDone />
                 Task 1 - Carla
               </TaskIten>
-              <TaskIten>
+              <TaskIten onClick={() => setShowContent(2)}>
                 <RadioDone />
                 Task 2 - Carla
               </TaskIten>
-              <TaskIten>
+              <TaskIten onClick={() => setShowContent(3)}>
                 <RadioNDone />
                 Task 3 - Lisiane
               </TaskIten>
@@ -171,53 +188,47 @@ const Default = () => {
                 />
                 Semana 2
               </WeekTab>
-              <TaskIten>
+              <TaskIten onClick={() => setShowContent(2)}>
                 <RadioDone />
                 Task 1 - Lisiane
               </TaskIten>
-              <TaskIten>
+              <TaskIten onClick={() => setShowContent(1)}>
                 <RadioNDone />
                 Task 2 - Carla
               </TaskIten>
-              <TaskIten>
+              <TaskIten onClick={() => setShowContent(3)}>
                 <RadioNDone />
                 Task 3 - Régis
               </TaskIten>
               {/* ---------------------------- */}
             </ContentContainerLeftList>
           </ContentContainerLeft>
-          <ContentContainerRight>
-            <ContentContainerRightHeader>
-              <WhiteSquare>
-                <LibraryBooksOutlinedIcon
-                  style={{
-                    color: primary,
-                    fontSize: '24px',
-                  }}
-                />
-              </WhiteSquare>
-            </ContentContainerRightHeader>
-            <MainContent>
-              <MainContentTitle>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                ipsam quia veniam obcaecati ea harum natus distinctio.
-              </MainContentTitle>
-              <MainContentText>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Recusandae nostrum placeat enim minima incidunt molestiae, dicta
-                aut rerum, iusto nulla facere quibusdam fuga exercitationem sit,
-                consequatur voluptate! Id, maiores incidunt!
-              </MainContentText>
-              <ContentImage
-                src="https://i.imgur.com/Mx4UQ6R.png"
-                alt="ilustration"
-              />
-            </MainContent>
-          </ContentContainerRight>
+          <Scrollbar
+            style={{
+              width: 'calc(100% - 310px)',
+              height: '100%',
+              overflow: 'auto',
+              backgroundColor: '#f6f5fa',
+            }}
+          >
+            <ContentContainerRight>
+              <ContentContainerRightHeader>
+                <WhiteSquare>
+                  <LibraryBooksOutlinedIcon
+                    style={{
+                      color: primary,
+                      fontSize: '24px',
+                    }}
+                  />
+                </WhiteSquare>
+              </ContentContainerRightHeader>
+              {renderContent()}
+            </ContentContainerRight>
+          </Scrollbar>
         </ContentContainer>
       </HomeContent>
     </MainContainer>
   );
 };
 
-export default Default;
+export default Tasks;

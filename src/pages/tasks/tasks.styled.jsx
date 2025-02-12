@@ -194,6 +194,8 @@ export const TaskIten = styled.div`
   font-size: 14px;
 
   color: ${primaryText};
+
+  cursor: pointer;
 `;
 
 export const RadioDone = styled.div`
@@ -221,7 +223,7 @@ export const RadioNDone = styled.div`
 `;
 
 export const ContentContainerRight = styled.div`
-  width: calc(100% - 310px);
+  width: 100%;
   height: 100%;
 
   background-color: #f6f5fa;
@@ -229,8 +231,6 @@ export const ContentContainerRight = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  overflow: auto;
 `;
 
 export const ContentContainerRightHeader = styled.div`
@@ -253,6 +253,8 @@ export const WhiteSquare = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  cursor: pointer;
 `;
 
 export const MainContent = styled.div`
@@ -265,7 +267,7 @@ export const MainContent = styled.div`
 `;
 
 export const MainContentTitle = styled.div`
-  width: 80%;
+  width: 78%;
   font-size: 22px;
   font-weight: bold;
   color: ${primaryText};
@@ -273,13 +275,72 @@ export const MainContentTitle = styled.div`
 
 export const MainContentText = styled.div`
   margin-top: 40px;
-  width: 80%;
+  width: 78%;
   font-size: 14px;
   color: ${secondaryText};
 `;
 
 export const ContentImage = styled.img`
   margin-top: 50px;
-  padding-bottom: 100px;
-  width: 45%;
+
+  width: 35%;
+`;
+
+export const FrameContainer = styled.div`
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  width: 78%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const AvaliationContainer = styled.div`
+  width: 78%;
+  color: ${secondaryText};
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 30px;
+  margin-top: 30px;
+`;
+
+export const AvaliationBlock = styled.div`
+  height: 30px;
+
+  border-radius: 15px;
+  border: solid 2px ${secondaryText};
+
+  margin-left: 15px;
+
+  padding: 0px 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const BigWhitheSquare = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+`;
+
+export const BigWhitheSquareTitle = styled.div`
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 78%;
+
+  font-size: 16px;
+  color: ${secondaryText};
+`;
+
+export const TextFuieldContainer = styled.div`
+  width: 78%;
+  margin-bottom: 50px;
 `;
