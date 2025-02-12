@@ -19,7 +19,11 @@ const App = () => {
     <MainContainer>
       <MenuContainer>
         <LogoContainer>
-          <Logo src="https://i.imgur.com/cto0jWS.png" alt="Logo" />
+          <Logo
+            src="https://i.imgur.com/A7LXxtu.png"
+            alt="Logo"
+            style={{ filter: 'brightness(100%)' }}
+          />
         </LogoContainer>
         <MenuItensContainer></MenuItensContainer>
       </MenuContainer>
