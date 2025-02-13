@@ -62,13 +62,10 @@ function LinearProgressWithLabel(props) {
   );
 }
 
-LinearProgressWithLabel.propTypes = {
-  value: PropTypes.number.isRequired,
-};
-
-const Tasks = () => {
+const Tasks = (props) => {
   const [progress, setProgress] = useState(50);
   const [showContent, setShowContent] = useState(1);
+  props.setUrl(window.location.pathname);
 
   const renderContent = () => {
     switch (showContent) {
@@ -232,3 +229,8 @@ const Tasks = () => {
 };
 
 export default Tasks;
+
+LinearProgressWithLabel.propTypes = {
+  value: PropTypes.number.isRequired,
+  setUrl: PropTypes.any,
+};

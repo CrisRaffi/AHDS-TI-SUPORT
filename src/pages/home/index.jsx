@@ -38,10 +38,14 @@ import HeaderBar from '../../components/headerBar';
 
 import { iconColor, primary, secondaryText } from '../../constants/colors.jsx';
 
+import PropTypes from 'prop-types';
+
 import { useNavigate } from 'react-router';
 
-const Home = () => {
+const Home = (props) => {
   const navigate = useNavigate();
+
+  props.setUrl(window.location.pathname);
   return (
     <MainContainer>
       <HomeContent>
@@ -194,3 +198,7 @@ const Home = () => {
 };
 
 export default Home;
+
+Home.propTypes = {
+  setUrl: PropTypes.any,
+};

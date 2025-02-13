@@ -23,7 +23,11 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 
 import { primary } from '../../constants/colors.jsx';
 
+import { useNavigate } from 'react-router';
+
 const HeaderBar = (props) => {
+  const navigate = useNavigate();
+
   const today = new Date();
   const yyyy = today.getFullYear();
   let mm = today.getMonth() + 1; // Months start at 0!
@@ -69,13 +73,9 @@ const HeaderBar = (props) => {
           <Link underline="hover" color="inherit" href="/">
             Home
           </Link>
-          <Link
-            underline="hover"
-            color="inherit"
-            href="/material-ui/getting-started/installation/"
-          >
+          <Typography disable color="textDisabled">
             {props.title}
-          </Link>
+          </Typography>
           <Typography sx={{ color: 'text.primary' }}>
             {formattedToday}
           </Typography>
