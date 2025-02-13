@@ -37,7 +37,7 @@ export const ContentContainerLeftSide = styled.div`
 
 export const CarHeader = styled.div`
   width: 100%;
-  height: 250px;
+  height: 220px;
 
   border-radius: 15px;
 
@@ -133,4 +133,62 @@ export const CarHeaderLeftSideContentTextBotton = styled.div`
   font-size: 14px;
 
   cursor: pointer;
+`;
+
+export const ContentContainerRigtSide = styled.div`
+  width: 35%;
+  height: 98%;
+
+  margin-left: 30px;
+
+  border-radius: 15px;
+
+  background-color: #f7f7f7;
+`;
+
+export const ProressAndConquests = styled.div`
+  width: 100%;
+  height: 220px;
+
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Progress = styled.div`
+  width: 49%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const ProgressTitle = styled.div`
+  width: 100%;
+  height: 30%;
+
+  display: flex;
+  align-items: center;
+
+  color: ${primaryText};
+`;
+
+export const ProgressCard = styled.div`
+  width: 100%;
+  height: 65%;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  border-radius: 15px;
+`;
+
+export const Conquest = styled.div`
+  width: 49%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;

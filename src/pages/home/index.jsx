@@ -16,16 +16,26 @@ import {
   SquareICon,
   CarHeaderLeftSideContentTextTop,
   CarHeaderLeftSideContentTextBotton,
+  ContentContainerRigtSide,
+  ProressAndConquests,
+  Progress,
+  Conquest,
+  ProgressTitle,
+  ProgressCard,
 } from './home.styled';
 
-import { iconColor } from '../../constants/colors.jsx';
+import { iconColor, primary } from '../../constants/colors.jsx';
 
 import VideoLibraryOutlinedIcon from '@mui/icons-material/VideoLibraryOutlined';
+import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
+import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 
 import HeaderBar from '../../components/headerBar';
 
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router';
+
+import * as motion from 'motion/react-client';
 
 const Home = (props) => {
   const navigate = useNavigate();
@@ -65,7 +75,36 @@ const Home = (props) => {
                 />
               </CarHeaderRightSide>
             </CarHeader>
+            <ProressAndConquests>
+              <Progress>
+                <ProgressTitle>
+                  <AssessmentOutlinedIcon
+                    style={{
+                      color: primary,
+                      fontSize: '30px',
+                      marginRight: 10,
+                    }}
+                  />
+                  Meu progresso
+                </ProgressTitle>
+                <ProgressCard></ProgressCard>
+              </Progress>
+              <Conquest>
+                <ProgressTitle>
+                  <AutoAwesomeOutlinedIcon
+                    style={{
+                      color: primary,
+                      fontSize: '30px',
+                      marginRight: 10,
+                    }}
+                  />
+                  Minhas conquistas
+                </ProgressTitle>
+                <ProgressCard></ProgressCard>
+              </Conquest>
+            </ProressAndConquests>
           </ContentContainerLeftSide>
+          <ContentContainerRigtSide></ContentContainerRigtSide>
         </ContentContainer>
       </HomeContent>
     </MainContainer>
