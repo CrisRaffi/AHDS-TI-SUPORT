@@ -31,5 +31,27 @@ export const Logo = styled.img`
 
 export const MenuItensContainer = styled.div`
   width: 100%;
-  height: 80%;
+  height: 75%;
+`;
+
+export const MenuIten = styled.div`
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+`;
+
+export const LogoutContainer = styled.div`
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  cursor: pointer;
 `;
