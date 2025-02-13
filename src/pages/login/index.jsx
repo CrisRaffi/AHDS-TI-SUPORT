@@ -42,7 +42,7 @@ const Login = (props) => {
             <Logo src="https://i.imgur.com/gxQYlsI.png" alt="logo" />
           </LogoContainer>
           <TextLogin>
-            Olá,Faça o login para verificar
+            Olá, faça o login para verificar
             <br />e organizar suas tarefas
           </TextLogin>
           <FieldsConatiener>
@@ -59,6 +59,7 @@ const Login = (props) => {
               id="outlined-basic"
               label="Senha"
               variant="outlined"
+              type="password"
             />
 
             <ButtonLogin
