@@ -40,11 +40,8 @@ const App = () => {
             />
           </LogoContainer>
           <MenuItensContainer>
-            <MenuIten>
-              <HomeOutlinedIcon
-                onClick={() => navigate('/home')}
-                style={{ fontSize: '32px', color: '#fff' }}
-              />
+            <MenuIten onClick={() => navigate('/home')}>
+              <HomeOutlinedIcon style={{ fontSize: '32px', color: '#fff' }} />
             </MenuIten>
             <MenuIten>
               <ConfirmationNumberOutlinedIcon
@@ -52,16 +49,12 @@ const App = () => {
                 style={{ fontSize: '32px', color: '#fff' }}
               />
             </MenuIten>
-            <MenuIten>
-              <TaskOutlinedIcon
-                onClick={() => navigate('/tasks')}
-                style={{ fontSize: '32px', color: '#fff' }}
-              />
+            <MenuIten onClick={() => navigate('/tasks')}>
+              <TaskOutlinedIcon style={{ fontSize: '32px', color: '#fff' }} />
             </MenuIten>
           </MenuItensContainer>
-          <LogoutContainer>
+          <LogoutContainer onClick={() => navigate('/login')}>
             <ExitToAppOutlinedIcon
-              onClick={() => navigate('/login')}
               style={{ fontSize: '32px', color: '#fff' }}
             />
           </LogoutContainer>

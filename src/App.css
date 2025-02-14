@@ -37,9 +37,8 @@
 .MuiLinearProgress-barColorPrimary {
   background: linear-gradient(
     90deg,
-    rgba(0, 248, 255, 1) 0%,
-    rgba(9, 9, 121, 1) 0%,
-    rgba(0, 212, 255, 1) 100%
+    rgb(0, 89, 255) 20%,
+    rgba(0, 212, 255, 1) 50%
   );
 }
 

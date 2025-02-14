@@ -2,9 +2,8 @@ import styled from 'styled-components';
 import {
   iconContainerColor,
   primaryText,
-  primary,
   secondaryText,
-  iconColor,
+  primary,
 } from '../../constants/colors.jsx';
 
 export const MainContainer = styled.div`
@@ -29,10 +28,12 @@ export const ContentContainer = styled.div`
 `;
 
 export const ContentContainerLeftSide = styled.div`
-  width: 60%;
+  width: 95%;
   height: 100%;
 
   margin-left: 30px;
+
+  overflow-x: hidden;
 `;
 
 export const CarHeader = styled.div`
@@ -92,6 +93,23 @@ export const SquareICon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin-right: 25px;
+`;
+
+export const SquareIConGreen = styled.div`
+  width: 65px;
+  height: 65px;
+
+  border-radius: 15px;
+
+  background-color: #e9f9fb;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 25px;
 `;
 
 export const CarHeaderLeftSideContentText = styled.div`
@@ -148,7 +166,7 @@ export const ContentContainerRigtSide = styled.div`
 
 export const ProressAndConquests = styled.div`
   width: 100%;
-  height: 220px;
+  height: 240px;
 
   margin-top: 30px;
 
@@ -167,7 +185,7 @@ export const Progress = styled.div`
 
 export const ProgressTitle = styled.div`
   width: 100%;
-  height: 30%;
+  height: 25%;
 
   display: flex;
   align-items: center;
@@ -177,11 +195,15 @@ export const ProgressTitle = styled.div`
 
 export const ProgressCard = styled.div`
   width: 100%;
-  height: 65%;
+  height: 70%;
 
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
   border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 `;
 
 export const Conquest = styled.div`
@@ -191,4 +213,81 @@ export const Conquest = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+`;
+
+export const SquareIConContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  color: ${primaryText};
+`;
+
+export const ConquestIten = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: ${primaryText};
+  font-size: 14px;
+`;
+
+export const TabelContainer = styled.div`
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 400px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 15px;
+`;
+
+export const TableIten = styled.div`
+  width: calc(100% - 2px);
+  height: 25%;
+
+  border-bottom: solid 1px #ccc;
+
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const ProfileInfos = styled.div`
+  width: calc(25% - 20px);
+  height: 100%;
+
+  padding: 0px 20px;
+
+  display: flex;
+  align-items: center;
+`;
+
+export const AvatarContainer = styled.div`
+  width: 60px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+`;
+
+export const TextInfos = styled.div`
+  width: calc(75% - 40px);
+  margin-left: 20px;
+`;
+
+export const ProfileInfosTitle = styled.div`
+  width: 100%;
+  color: ${primaryText};
+`;
+
+export const ProfileInfosSubTitle = styled.div`
+  width: 100%;
+  color: ${secondaryText};
+`;
+
+export const LineContainer = styled.div`
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
